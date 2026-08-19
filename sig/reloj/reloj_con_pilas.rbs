@@ -1,0 +1,2 @@
+class RelojConPilas < Reloj
+end

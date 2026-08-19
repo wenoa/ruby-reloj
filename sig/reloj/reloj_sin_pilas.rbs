@@ -1,0 +1,29 @@
+class RelojSinPilas < Reloj
+  def self.detenido_justo_ahora: () -> RelojSinPilas
+
+  def initialize: (Time ahora) -> void
+
+  attr_reader ahora: Time
+
+  def clonar: () -> RelojSinPilas
+
+  def tic: () -> RelojSinPilas
+
+  def tic!: () -> self
+
+  def cit: () -> RelojSinPilas
+
+  def cit!: () -> self
+
+  def avanzar_dias: (Integer dias) -> RelojSinPilas
+
+  def avanzar_dias!: (Integer dias) -> self
+
+  def retroceder_dias: (Integer dias) -> RelojSinPilas
+
+  def retroceder_dias!: (Integer dias) -> self
+
+  def en!: (Date | Time momento) -> self
+
+  def en_burbuja_temporal: [T] () { () -> T } -> T
+end

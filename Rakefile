@@ -11,6 +11,8 @@ task(:test) {
 
 task(:format) { sh "rubocop -A" }
 
+task(:typecheck) { sh "steep check" }
+
 task(:check_coverage) {
   SimpleCov.collate(Dir["coverage/.resultset.json"]) {
     enable_coverage :branch
@@ -22,4 +24,4 @@ task(:check_coverage) {
   }
 }
 
-task default: [:format, :test, :check_coverage]
+task default: [:format, :typecheck, :test, :check_coverage]

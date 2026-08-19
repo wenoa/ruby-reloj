@@ -1,0 +1,15 @@
+class Reloj
+  VERSION: String
+
+  def ahora: () -> Time
+
+  def hoy: () -> Date
+
+  def ayer: () -> Date
+
+  def anteayer: () -> Date
+
+  def `mañana`: () -> Date
+
+  def `pasado_mañana`: () -> Date
+end

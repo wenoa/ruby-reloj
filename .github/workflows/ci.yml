@@ -18,6 +18,9 @@ jobs:
       - name: "🎨 Lint"
         run: bundle exec rubocop
 
+      - name: "🔍 Typecheck"
+        run: bundle exec steep check
+
       - name: "🧪 Test"
         run: bundle exec rake test
 

@@ -39,7 +39,8 @@ class RelojSinPilas < Reloj
   def avanzar_dias!(dias)
     fecha = @ahora.to_date + dias
     @ahora = Time.new(fecha.year, fecha.month, fecha.day,
-                      @ahora.hour, @ahora.min, @ahora.sec + @ahora.subsec)
+                      @ahora.hour, @ahora.min,
+                      @ahora.sec + @ahora.subsec.to_r)
     self
   end
 
